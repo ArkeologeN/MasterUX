@@ -1,0 +1,14 @@
+/* 
+    Document   : style
+    Created on : Sep 14, 2012, 7:43:35 PM
+    Author     : alihashmi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body { margin: 0px; padding: 0px;}
+#map-container { width: 100%; height: 700px; display: block;}

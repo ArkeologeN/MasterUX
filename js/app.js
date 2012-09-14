@@ -36,7 +36,6 @@ $(document).ready(function() {
             },
             events: {
                 dragend: function(marker, evt, data) {
-                    console.log(marker);
                     var _points = marker.getPosition();
                     switch(data) {
                         case k1:
@@ -81,6 +80,9 @@ $(document).ready(function() {
                              }                                
                         }
                     );                   
+                },
+                visible_changed: function() {
+                    console.log("FIRE!!!");
                 }
             }
         }

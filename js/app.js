@@ -7,6 +7,9 @@
 var $ = jQuery;
 
 $(document).ready(function() {
+    
+    //$('#lt-checkin').datepicker();
+    
     var k1 = 'k1';
     var k2 = 'k2';
     var mMark1 = {lat:49.00408,lng:2.56228, data:k1, tag: k1}
@@ -36,19 +39,26 @@ $(document).ready(function() {
             },
             events: {
                 dragend: function(marker, evt, data) {
+                    /*
+                     * $('#locationto').dialog({
+                        modal: true,
+                        height: 400,
+                        width: 400
+                    }); 
+                     */
                     var _points = marker.getPosition();
                     switch(data) {
                         case k1:
                             mMark1.lat = _points.Xa;
                             mMark1.lng = _points.Ya;
-                            $(this).gmap3({ action: 'clear', name: 'marker',tag: k1 });
-                            $(this).gmap3({ action: 'clear',name: 'marker', tag: k2});
+                            $(this).gmap3({action: 'clear', name: 'marker',tag: k1});
+                            $(this).gmap3({action: 'clear',name: 'marker', tag: k2});
                             break;
                         case k2:
                             mMark2.lat = _points.Xa;
                             mMark2.lng = _points.Ya;
-                            $(this).gmap3({ action: 'clear', name: 'marker',tag: k1 });
-                            $(this).gmap3({ action: 'clear',name: 'marker', tag: k2});
+                            $(this).gmap3({action: 'clear', name: 'marker',tag: k1});
+                            $(this).gmap3({action: 'clear',name: 'marker', tag: k2});
                             break;
                             default:break;
                     }
